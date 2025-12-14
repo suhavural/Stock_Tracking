@@ -1,26 +1,11 @@
-# Veritabanı Kurulum Kılavuzu
+# VeritabanÄ± Kurulum KÄ±lavuzu
 
-## Kurulum Adımları
+## Kurulum AdÄ±mlarÄ±
 
-1. SQL Server Management Studio'yu açın
-2. `DatabaseScript.sql` dosyasını açın
-3. F5 ile çalıştırın
-4. `mvcstokk` veritabanı oluşturulacaktır
+1. SQL Server Management Studio'yu aÃ§Ä±n
+2. `DatabaseScript.sql` dosyasÄ±nÄ± aÃ§Ä±n
+3. F5 ile Ã§alÄ±ÅŸtÄ±rÄ±n
+4. `mvcstokk` veritabanÄ± oluÅŸturulacaktÄ±r
 
-## Veritabanı Yapısı
-
-### Tablolar
-- kategoriler
-- urunler
-- musteriler
-
-### Stored Procedures
-- 15 adet stored procedure
-
-### Functions
-- 4 adet user-defined function
-
-### Triggers
-- 12 adet trigger
 
 ## Connection String
