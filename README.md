@@ -48,7 +48,7 @@ Update the connection string in `Web.config`:
 ```xml
 <connectionStrings>
   <add name="DefaultConnection" 
-       connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=mvcstokkk;Integrated Security=True" 
+       connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=mvcstokk;Integrated Security=True" 
        providerName="System.Data.SqlClient" />
 </connectionStrings>
 ```
