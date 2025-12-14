@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "_MainLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stok Takip Sistemi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Sol panel */
+        .sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #222;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                display: block;
+                padding: 12px 20px;
+                color: #ddd;
+                text-decoration: none;
+                font-size: 16px;
+                border-bottom: 1px solid #333;
+            }
+
+                .sidebar a:hover {
+                    background-color: #111;
+                    color: #fff;
+                }
+
+        /* Sayfa içeriği */
+        .content {
+            margin-left: 250px; /* Sidebar genişliği */
+            padding: 20px;
+        }
+
+        /* Başlık */
+        .sidebar .brand {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SOL SİDEBAR -->
+    <div class="sidebar">
+        <div class="brand">📦 STOK TAKİP</div>
+
+        <a href="/Home/Index">🏠 Dashboard</a>
+        <a href="/urun/Index">🛒 Ürünler</a>
+        <a href="/musteri/Index">👤 Müşteriler</a>
+        <a href="/kategori/Index">📁 Kategoriler</a>
+        <!-- <a href="/satis/Index">💰 Satışlar</a> --> 
+
+
+    </div>
+
+    <!-- ANA İÇERİK -->
+    <div class="content">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model mvcstokk.Models.Entity.kategoriler
+
+@{
+    ViewBag.Title = "Yeni Kategori";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Yeni Kategori Ekle</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Kategori Adı</label>
+        <input type="text" name="KATEGORİAD" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary">Kaydet</button>
+</form>

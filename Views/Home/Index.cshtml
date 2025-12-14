@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #5FFDF5 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .dashboard-header {
+        text-align: center;
+        color: gold;
+        margin-bottom: 50px;
+    }
+
+        .dashboard-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .dashboard-header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+    .card-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .card h2 {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        color: #718096;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .card-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+        .card-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            text-decoration: none;
+            color: white;
+        }
+
+    .footer {
+        text-align: center;
+        color: white;
+        margin-top: 60px;
+        padding: 30px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+    }
+
+        .footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+</style>
+
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>📊 Stok Takip Dashboard</h1>
+        <p style="color:red; font-weight: bold;">HOŞGELDİNİZ İŞLEMLERİNİZİ AŞAĞIDAN YÖNETEBİLİRSİNİZ.</p>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card">
+            <span class="card-icon">📦</span>
+            <h2>Ürünler</h2>
+            <p>Ürün ekleme, silme, güncelleme ve stok takibi işlemlerini kolayca yapabilirsiniz.</p>
+            <a href="/urun/Index" class="card-button">Ürün Yönetimi</a>
+        </div>
+
+        <div class="card">
+            <span class="card-icon">👥</span>
+            <h2>Müşteriler</h2>
+            <p>Müşteri bilgilerini görüntüleyin, yeni müşteri ekleyin ve müşteri profillerini yönetin.</p>
+            <a href="/musteri/Index" class="card-button">Müşteri Yönetimi</a>
+        </div>
+
+        <div class="card">
+            <span class="card-icon">🏷️</span>
+            <h2>Kategoriler</h2>
+            <p>Kategori listesini görüntüleyin ve yeni kategoriler ekleyerek ürünlerinizi organize edin.</p>
+            <a href="/kategori/Index" class="card-button">Kategori Yönetimi</a>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <h3>📦 Stok Takip Sistemi</h3>
+        <p>MVC Projesi - Profesyonel Stok Yönetimi</p>
+    </div>
+</div>

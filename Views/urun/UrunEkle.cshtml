@@ -1,0 +1,36 @@
+﻿@model mvcstokk.Models.Entity.urunler
+
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Ürün Ekle</h2>
+
+@using (Html.BeginForm("UrunEkle", "urun", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.URUNAD)
+        @Html.TextBoxFor(x => x.URUNAD, new { @class = "form-control", placeholder = "Ürün adı giriniz" })
+        <br />
+
+        @Html.LabelFor(x => x.URUNKATEGORİ)
+        @Html.TextBoxFor(x => x.URUNKATEGORİ, new { @class = "form-control", placeholder = "Kategori ID" })
+        <br />
+
+        @Html.LabelFor(x => x.FİYAT)
+        @Html.TextBoxFor(x => x.FİYAT, new { @class = "form-control", placeholder = "Fiyat giriniz" })
+        <br />
+
+        @Html.LabelFor(x => x.MARKA)
+        @Html.TextBoxFor(x => x.MARKA, new { @class = "form-control", placeholder = "Marka" })
+        <br />
+
+        @Html.LabelFor(x => x.STOK)
+        @Html.TextBoxFor(x => x.STOK, new { @class = "form-control", placeholder = "Stok adedi" })
+        <br />
+
+        <button class="btn btn-primary">Ürün Ekle</button>
+    </div>
+}

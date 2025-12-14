@@ -1,0 +1,25 @@
+﻿@model mvcstokk.Models.Entity.kategoriler
+
+@{
+    ViewBag.Title = "Kategori Güncelle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Kategori Güncelle</h2>
+
+<form method="post" action="/kategori/Güncelle/">
+
+    <div class="form-group">
+        <label>Kategori ID</label>
+        <input type="text" class="form-control" name="KATEGORİID"
+               value="@Model.KATEGORİID" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Kategori Adı</label>
+        <input type="text" class="form-control" name="KATEGORİAD"
+               value="@Model.KATEGORİAD" required />
+    </div>
+
+    <button class="btn btn-success">Güncelle</button>
+</form>

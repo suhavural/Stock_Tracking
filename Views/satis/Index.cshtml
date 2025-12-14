@@ -1,0 +1,30 @@
+﻿@using mvcstokk.Models.Entity;
+@model List<satis>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Satış Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>SATIŞ ID</th>
+        <th>ÜRÜN</th>
+        <th>MÜŞTERİ</th>
+        <th>ADET</th>
+        <th>FİYAT</th>
+    </tr>
+    <tbody>
+        @foreach (var sts in Model)
+        {
+            <tr>
+                <td>@sts.SATISID</td>
+                <td></td>
+                <td></td>
+                <td>@sts.ADET</td>
+                <td>@sts.FİYAT</td>
+            </tr>
+        }
+    </tbody>
+</table>
